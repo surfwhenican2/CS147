@@ -9,10 +9,13 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<link href="style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	</head>
 
 	<body>
-			<!-- This is the top bit with the image. 
+	<style>
+	
+	</style>		<!-- This is the top bit with the image. 
 		I wonder why there's no image tag here? -->
 		<div class="whitebit"></div>
 
@@ -32,6 +35,7 @@
 		<script type="text/javascript">
 		var count = 30;
 		var counter = setInterval(timer, 1000); 
+<<<<<<< HEAD
 
 		function timer() {
    			 count = count - 1;
@@ -41,6 +45,20 @@
      			   document.getElementById('button').style.visibility = 'hidden';
        		 return;
    			 }
+=======
+		
+		function timer() {
+		    count = count - 1;
+		    if (count <= 0) {
+		        clearInterval(counter);
+		        alert("Boom!");
+		        document.getElementById('button').style.visibility = 'hidden';
+		        return;
+		    }
+		
+		    document.getElementById("timer").innerHTML = count + " secs";
+		}
+>>>>>>> 8865913693746c227d84e5de89407297f0367e59
 
   		  document.getElementById("timer").innerHTML = count + " secs";
 		}
@@ -64,9 +82,17 @@ function getLocation() {
 }
 
 function showPosition(position) {
+<<<<<<< HEAD
     alert(position.coords.latitude);
     alert(position.coords.longitude);
 }
+=======
+    $(".box1").html(position.coords.latitude);
+    $(".box2").html(position.coords.longitude);
+} 
+
+getLocation();
+>>>>>>> 8865913693746c227d84e5de89407297f0367e59
 		</script>
 	</body>
 </html>
